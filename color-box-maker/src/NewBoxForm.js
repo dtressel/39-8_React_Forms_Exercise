@@ -1,5 +1,9 @@
 import { useState } from "react";
 import './NewBoxForm.css';
+import { v4 as uuid } from 'uuid';
+
+const colorArray = ['red', 'green', 'blue', 'yellow', 'orange', 'purple', 
+  'maroon', 'fuchsia', 'lime', 'navy', 'teal', 'aqua', 'olive'];
 
 const NewBoxForm = ({ addBox }) => {
   const INITIAL_STATE = {
@@ -58,19 +62,7 @@ const NewBoxForm = ({ addBox }) => {
         <div>
           <label htmlFor='color'>Color</label>
           <select id='color' name='color' onChange={handleChange} value={formData.color} >
-            <option value='red'>red</option>
-            <option value='green'>green</option>
-            <option value='blue'>blue</option>
-            <option value='yellow'>yellow</option>
-            <option value='orange'>orange</option>
-            <option value='purple'>purple</option>
-            <option value='maroon'>maroon</option>
-            <option value='fuchsia'>fuchsia</option>
-            <option value='lime'>lime</option>
-            <option value='navy'>navy</option>
-            <option value='teal'>teal</option>
-            <option value='aqua'>aqua</option>
-            <option value='olive'>olive</option>
+            {colorArray.map(color => <option value={color} key={uuid()}>{color}</option>)}
           </select>
         </div>
         <div>
