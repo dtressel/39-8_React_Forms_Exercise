@@ -1,0 +1,19 @@
+.NewBoxForm-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.NewBoxForm-wrapper > form > div {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.NewBoxForm-wrapper > form > div > input {
+ margin: 0 5px;
+}
+
+.NewBoxForm-wrapper > form > div > select {
+  margin-left: 5px;
+}
